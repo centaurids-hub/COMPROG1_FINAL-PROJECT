@@ -44,6 +44,6 @@ The filtered dataset focuses on environmental conditions where anoxic events are
 ---
 
 ## 📌 Notes
-- Original dataset is stored as `dataset_original.csv`
-- Filtered dataset is stored as `dataset_cleaned.csv`
+- Original dataset is stored as `Aquapond Dataset. csv`
+- Filtered dataset is stored as `filtered_dataset.csv`
 - Data processing and filtering are implemented using Python (pandas & NumPy)
