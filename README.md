@@ -1,7 +1,16 @@
+# Aquaculture Water Quality Dataset – AQU-01
 
-# Create the fixed README.md matching the user's repo structure from images
+## 👤 Student Information
+- **Name:** Jesier Cresencio  
+- **Student ID:** [25-2043]  
+- **Course/Section:** BSECE 1C  
+- **Professor:** [Engr. Gilfred Allen Madrigal]  
+- **School:** Technological University of the Philippines – Manila  
 
-readme_content = """<div align="center">
+---
+
+## 📊 Project Title
+**Anoxic Event Prediction using Aquaculture Water Quality Data**
 
 # COMPROG1 Final Project
 ## Automated Analysis of Aquaculture Water Quality Stability
@@ -13,17 +22,17 @@ readme_content = """<div align="center">
 
 **A Python data pipeline for environmental monitoring and predictive model evaluation under stable aquaculture conditions.**
 
-[Overview](#overview) • [Dataset](#dataset) • [Pipeline](#pipeline) • [Results](#results) • [Usage](#usage) • [Citation](#citation)
+[Overview](#overview) &bull; [Dataset](#dataset) &bull; [Pipeline](#pipeline) &bull; [Results](#results) &bull; [Usage](#usage) &bull; [Citation](#citation)
 
 </div>
 
----
+--
 
 ## Overview
 
 > This project implements a structured, modular workflow that processes raw sensor data through ingestion, cleaning, feature engineering, statistical analysis, multi-model comparison, and visualization.
 
-Developed as the final project for **Computer Programming 1 (COMPROG1)**, the study examines Station 1 data from June 2022 — a high-temperature period where reduced oxygen solubility is expected — to assess whether machine learning models can predict anoxic conditions when environmental parameters remain stable.
+Developed as the final project for **Computer Programming 1 (COMPROG1)**, the study examines Station 1 data from June 2022 &mdash; a high-temperature period where reduced oxygen solubility is expected &mdash; to assess whether machine learning models can predict anoxic conditions when environmental parameters remain stable.
 
 **Key takeaway:** *Stable environmental conditions with limited variability fundamentally constrain ML predictive performance. Data variability, not model complexity, is the primary limiting factor.*
 
@@ -32,7 +41,7 @@ Developed as the final project for **Computer Programming 1 (COMPROG1)**, the st
 ## Dataset
 
 ```
-Source:      Kaggle — Aquaculture Water Quality Dataset
+Source:      Kaggle &mdash; Aquaculture Water Quality Dataset
 Filter:      Station 1, June 2022, DO < 6.5 mg/L
 Records:     61 observations
 Features:    Temperature, pH, Ammonia, Nitrate, Turbidity
@@ -43,7 +52,7 @@ Balance:     31 Normal / 30 Anoxic
 | Parameter | Mean | Median | Std Dev |
 |:----------|:----:|:------:|:-------:|
 | DO (mg/L) | 5.77 | 5.80 | 0.42 |
-| Temp (C) | 27.92 | 27.90 | 1.71 |
+| Temp (&deg;C) | 27.92 | 27.90 | 1.71 |
 | pH | 7.06 | 6.97 | 1.02 |
 | Ammonia (mg/L) | 0.03 | 0.03 | 0.01 |
 | Nitrate (PPM) | 21.61 | 22.20 | 11.57 |
@@ -84,10 +93,10 @@ models = {
 
 ### Environmental Stability Findings
 
-- `Dissolved Oxygen` — moderate and consistent: **mean = 5.77 mg/L, sigma = 0.42**
-- `Temperature` — elevated but stable: **mean = 27.92 C**
-- `Temperature-DO correlation` — weak inverse: **r = -0.13**
-- `Inter-feature correlations` — all weak: **|r| < 0.22**
+- `Dissolved Oxygen` &mdash; moderate and consistent: **mean = 5.77 mg/L, &sigma; = 0.42**
+- `Temperature` &mdash; elevated but stable: **mean = 27.92&deg;C**
+- `Temperature-DO correlation` &mdash; weak inverse: **r = -0.13**
+- `Inter-feature correlations` &mdash; all weak: **|r| < 0.22**
 
 ### Model Performance Summary
 
@@ -101,9 +110,9 @@ models = {
 | SVM (RBF) | Polynomial (20) | 39.2% | 38.5% | 0.643 |
 | KNN (k=5) | Original (5) | 45.8% | 38.5% | 0.333 |
 | KNN (k=5) | Polynomial (20) | 47.3% | 46.2% | 0.381 |
-| **KNN (Tuned)** | — | **58.4%** | **38.5%** | — |
+| **KNN (Tuned)** | &mdash; | **58.4%** | **38.5%** | &mdash; |
 
-> **Note:** All test accuracies remain below the 50% random-guess baseline. Polynomial expansion and GridSearchCV failed to improve performance, confirming **data variability** — not model inadequacy — as the fundamental constraint.
+> **Note:** All test accuracies remain below the 50% random-guess baseline. Polynomial expansion and GridSearchCV failed to improve performance, confirming **data variability** &mdash; not model inadequacy &mdash; as the fundamental constraint.
 
 <details>
 <summary><b>Hyperparameter Tuning Details</b></summary>
@@ -131,8 +140,8 @@ Best KNN Config: k=11, weights='distance', metric='manhattan'
 ```
 COMPROG1_FINAL-PROJECT/
 |
-|-- CODE/
-|   |-- outputs/                          # Generated figures & animations
+|-- CODE/                                    # Main project branch
+|   |-- outputs/                             # Generated figures & animations
 |   |   |-- fig_model_comparison.png
 |   |   |-- fig_model_comparison_vertical.png
 |   |   |-- fig_confusion_matrices.png
@@ -149,18 +158,19 @@ COMPROG1_FINAL-PROJECT/
 |   |   |-- model_comparison_results.csv
 |   |
 |   |-- .gitignore
-|   |-- I've_tried_sir:(.ipynb            # Experimental notebook
-|   |-- Machine_Learning_Code.ipynb       # Main analysis notebook
-|   |-- README.md                         # This file
-|   |-- filtered_dataset.csv              # Preprocessed dataset
-|   |-- system_architecture_flowchart.png # Pipeline diagram
+|   |-- CRESENCIO_2043_IEEE_Paper.pdf        # Full research paper
+|   |-- I've_tried_sir:(.ipynb               # Experimental notebook
+|   |-- Machine_Learning_Code.ipynb          # Main analysis notebook
+|   |-- README.md                            # This file
+|   |-- filtered_dataset.csv                 # Preprocessed dataset
+|   |-- system_architecture_flowchart.png    # Pipeline diagram
 |
-|-- dataset/
-|   |-- Aquaponds Dataset.csv             # Raw dataset
-|   |-- filtered_aqua_ponds_datasets.ipynb # Data filtering notebook
-|   |-- filtered_dataset.csv              # Filtered dataset
+|-- dataset/                                 # Data processing branch
+|   |-- Aquaponds Dataset.csv                # Raw dataset
+|   |-- filtered_aqua_ponds_datasets.ipynb   # Data filtering notebook
+|   |-- filtered_dataset.csv                 # Filtered dataset
 |
-|-- README.md                             # Root README (student info)
+|-- README.md                                # Root README (student info)
 ```
 
 ---
@@ -208,14 +218,57 @@ python main.py
 
 ---
 
+## 📁 Dataset Description
+This dataset contains water quality parameters collected from aquaculture ponds, including:
+- Temperature (TEMP)
+- Dissolved Oxygen (DO)
+- pH
+- Ammonia
+- Nitrate
+- Turbidity and other sensor readings
+
+The data is used to analyze environmental conditions that may lead to anoxic events (low oxygen levels).
+
+---
+
+## ⚙️ Unique Filter Logic
+To ensure a unique and relevant dataset, the following filter was applied:
+
+- Data is limited to **station1**
+- Only records from the **month of June (Month = 6)** are included
+- **Dissolved Oxygen (DO < 6.5 mg/L)** is used to isolate low-oxygen conditions
+
+June was selected because it has the **highest average temperature** in the dataset. Higher temperatures reduce oxygen solubility in water, making it an ideal condition for analyzing potential anoxic events.
+
+---
+
+## 🎯 Purpose
+The filtered dataset focuses on environmental conditions where anoxic events are more likely to occur. This supports data analysis, visualization, and machine learning tasks for predicting low dissolved oxygen scenarios.
+
+---
+
+<div align="center">
+
+Dataset sourced from <a href="https://www.kaggle.com/datasets">Kaggle</a>
+
+</div>
+
+---
+
+## 📌 Notes
+- Original dataset is stored as `Aquapond Dataset. csv`
+- Filtered dataset is stored as `filtered_dataset.csv`
+- Data processing and filtering are implemented using Python (pandas & NumPy)
+
+---
+
 ## Citation
 
 If referencing this work in your research:
 
-> Cresencio, J. S. (2026). *Automated Analysis of Aquaculture Water Quality Stability and Evaluation of Predictive Modeling Using Python Data Pipelines*. COMPROG1 Final Project, Technological University of the Philippines — Manila.
+> Cresencio, J. S. (2026). *Automated Analysis of Aquaculture Water Quality Stability and Evaluation of Predictive Modeling Using Python Data Pipelines*. COMPROG1 Final Project, Technological University of the Philippines &mdash; Manila.
 
-Full paper: `CRESENCIO_2043_IEEE_Paper.pdf` (available upon request)
-
+Full paper: [`CRESENCIO_2043_IEEE_Paper.pdf`](./CRESENCIO_2043_IEEE_Paper.pdf)
 ---
 
 ## Author
@@ -224,20 +277,3 @@ Full paper: `CRESENCIO_2043_IEEE_Paper.pdf` (available upon request)
 Department of Electronics Engineering  
 Technological University of the Philippines, Manila  
 `jesiercresencio12@gmail.com`
-
----
-
-<div align="center">
-
-**Developed under the guidance of the COMPROG1 faculty, TUP Manila.**
-
-Dataset sourced from <a href="https://www.kaggle.com/datasets">Kaggle</a>
-
-</div>
-"""
-
-with open('/mnt/agents/output/README.md', 'w') as f:
-    f.write(readme_content)
-
-print("README.md created successfully!")
-print(f"Length: {len(readme_content)} characters")
