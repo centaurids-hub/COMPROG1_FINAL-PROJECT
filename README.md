@@ -252,7 +252,6 @@ The filtered dataset focuses on environmental conditions where anoxic events are
 Dataset sourced from <a href="https://www.kaggle.com/datasets">Kaggle</a>
 
 </div>
-"""
 
 ---
 
