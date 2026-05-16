@@ -1,3 +1,8 @@
+
+# Create the fixed README.md matching the user's repo structure from images
+
+readme_content = """<div align="center">
+
 # COMPROG1 Final Project
 ## Automated Analysis of Aquaculture Water Quality Stability
 
@@ -126,28 +131,36 @@ Best KNN Config: k=11, weights='distance', metric='manhattan'
 ```
 COMPROG1_FINAL-PROJECT/
 |
-|-- Machine_Learning_Code.ipynb      # Main analysis notebook
-|-- main.py                           # Pipeline script
-|-- filtered_dataset.csv              # Preprocessed dataset
-|-- requirements.txt                  # Python dependencies
-|-- CRESENCIO_2043_IEEE_Paper.pdf    # Full research paper
-|
-|-- outputs/                          # Generated figures & animations
-|   |-- fig_model_comparison.png
-|   |-- fig_model_comparison_vertical.png
-|   |-- fig_confusion_matrices.png
-|   |-- fig_feature_importance.png
-|   |-- fig_cv_stability_boxplot.png
-|   |-- fig_correlation_heatmap.png
-|   |-- fig_class_distribution.png
-|   |-- fig_histogram_do.png
-|   |-- fig_scatter_temp_do.png
-|   |-- fig_boxplot_parameters.png
-|   |-- anim1_do_progression.gif
-|   |-- anim2_rolling_distribution.gif
+|-- CODE/
+|   |-- outputs/                          # Generated figures & animations
+|   |   |-- fig_model_comparison.png
+|   |   |-- fig_model_comparison_vertical.png
+|   |   |-- fig_confusion_matrices.png
+|   |   |-- fig_feature_importance.png
+|   |   |-- fig_cv_stability_boxplot.png
+|   |   |-- fig_correlation_heatmap.png
+|   |   |-- fig_class_distribution.png
+|   |   |-- fig_histogram_do.png
+|   |   |-- fig_scatter_temp_do.png
+|   |   |-- fig_boxplot_parameters.png
+|   |   |-- anim1_do_progression.gif
+|   |   |-- anim2_rolling_distribution.gif
+|   |   |-- complete_model_results.csv
+|   |   |-- model_comparison_results.csv
 |   |
-|   |-- complete_model_results.csv
-|   |-- model_comparison_results.csv
+|   |-- .gitignore
+|   |-- I've_tried_sir:(.ipynb            # Experimental notebook
+|   |-- Machine_Learning_Code.ipynb       # Main analysis notebook
+|   |-- README.md                         # This file
+|   |-- filtered_dataset.csv              # Preprocessed dataset
+|   |-- system_architecture_flowchart.png # Pipeline diagram
+|
+|-- dataset/
+|   |-- Aquaponds Dataset.csv             # Raw dataset
+|   |-- filtered_aqua_ponds_datasets.ipynb # Data filtering notebook
+|   |-- filtered_dataset.csv              # Filtered dataset
+|
+|-- README.md                             # Root README (student info)
 ```
 
 ---
@@ -159,7 +172,7 @@ COMPROG1_FINAL-PROJECT/
 ```bash
 # Clone the repository
 git clone https://github.com/centaurids-hub/COMPROG1_FINAL-PROJECT.git
-cd COMPROG1_FINAL-PROJECT
+cd COMPROG1_FINAL-PROJECT/CODE
 
 # Create virtual environment (optional but recommended)
 python -m venv venv
@@ -199,21 +212,9 @@ python main.py
 
 If referencing this work in your research:
 
-```bibtex
-@misc{cresencio2026aquaculture,
-  author = {Cresencio, Jesier S.},
-  title = {Automated Analysis of Aquaculture Water Quality Stability 
-           and Evaluation of Predictive Modeling Using Python Data Pipelines},
-  institution = {Technological University of the Philippines — Manila},
-  department = {Department of Electronics Engineering},
-  year = {2026},
-  type = {COMPROG1 Final Project}
-}
-```
-
 > Cresencio, J. S. (2026). *Automated Analysis of Aquaculture Water Quality Stability and Evaluation of Predictive Modeling Using Python Data Pipelines*. COMPROG1 Final Project, Technological University of the Philippines — Manila.
 
-Full paper: [`CRESENCIO_2043_IEEE_Paper.pdf`](./CRESENCIO_2043_IEEE_Paper.pdf)
+Full paper: `CRESENCIO_2043_IEEE_Paper.pdf` (available upon request)
 
 ---
 
@@ -235,3 +236,8 @@ Dataset sourced from <a href="https://www.kaggle.com/datasets">Kaggle</a>
 </div>
 """
 
+with open('/mnt/agents/output/README.md', 'w') as f:
+    f.write(readme_content)
+
+print("README.md created successfully!")
+print(f"Length: {len(readme_content)} characters")
