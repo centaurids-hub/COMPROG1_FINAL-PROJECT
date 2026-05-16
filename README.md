@@ -218,41 +218,6 @@ python main.py
 
 ---
 
-## Citation
-
-If referencing this work in your research:
-
-> Cresencio, J. S. (2026). *Automated Analysis of Aquaculture Water Quality Stability and Evaluation of Predictive Modeling Using Python Data Pipelines*. COMPROG1 Final Project, Technological University of the Philippines &mdash; Manila.
-
-Full paper: [`CRESENCIO_2043_IEEE_Paper.pdf`](./CRESENCIO_2043_IEEE_Paper.pdf)
----
-
-## Author
-
-**Jesier S. Cresencio**  
-Department of Electronics Engineering  
-Technological University of the Philippines, Manila  
-`jesiercresencio12@gmail.com`
-
----
-
-<div align="center">
-
-**Developed under the guidance of the COMPROG1 faculty, TUP Manila.**
-
-Dataset sourced from <a href="https://www.kaggle.com/datasets">Kaggle</a>
-
-</div>
-"""
-
-with open('/mnt/agents/output/README.md', 'w') as f:
-    f.write(readme_updated)
-
-print("README.md updated successfully!")
-print(f"Length: {len(readme_updated)} characters")
-
----
-
 ## 📁 Dataset Description
 This dataset contains water quality parameters collected from aquaculture ponds, including:
 - Temperature (TEMP)
@@ -282,7 +247,34 @@ The filtered dataset focuses on environmental conditions where anoxic events are
 
 ---
 
+<div align="center">
+
+Dataset sourced from <a href="https://www.kaggle.com/datasets">Kaggle</a>
+
+</div>
+"""
+
+---
+
 ## 📌 Notes
 - Original dataset is stored as `Aquapond Dataset. csv`
 - Filtered dataset is stored as `filtered_dataset.csv`
 - Data processing and filtering are implemented using Python (pandas & NumPy)
+
+---
+
+## Citation
+
+If referencing this work in your research:
+
+> Cresencio, J. S. (2026). *Automated Analysis of Aquaculture Water Quality Stability and Evaluation of Predictive Modeling Using Python Data Pipelines*. COMPROG1 Final Project, Technological University of the Philippines &mdash; Manila.
+
+Full paper: [`CRESENCIO_2043_IEEE_Paper.pdf`](./CRESENCIO_2043_IEEE_Paper.pdf)
+---
+
+## Author
+
+**Jesier S. Cresencio**  
+Department of Electronics Engineering  
+Technological University of the Philippines, Manila  
+`jesiercresencio12@gmail.com`
