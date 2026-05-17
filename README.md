@@ -2,9 +2,9 @@
 
 ## 👤 Student Information
 - **Name:** Jesier Cresencio  
-- **Student ID:** [25-2043]  
+- **Student ID:** 25-2043 
 - **Course/Section:** BSECE 1C  
-- **Professor:** [Engr. Gilfred Allen Madrigal]  
+- **Professor:**Engr. Gilfred Allen Madrigal
 - **School:** Technological University of the Philippines – Manila  
 
 ---
