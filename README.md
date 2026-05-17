@@ -10,7 +10,7 @@
 ---
 
 ## 📊 Project Title
-**Anoxic Event Prediction using Aquaculture Water Quality Data**
+**Automated Analysis of Aquaculture Water Quality Stability and Evaluation of Predictive Modeling Using Python Data Pipelines**
 
 # COMPROG1 Final Project
 ## Automated Analysis of Aquaculture Water Quality Stability
